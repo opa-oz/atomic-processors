@@ -25,25 +25,32 @@ namespace CSV2JSON
 
     void write_row(ofstream &output, const CSVRow &row, const bool &is_mapping_empty, json &mapping)
     {
-        if (is_mapping_empty)
-        {
-            output << row.to_json();
-            return;
-        }
-
         json new_el = json({});
         json row_parsed = json::parse(row.to_json());
 
-        for (auto &element : row_parsed.items())
+        if (is_mapping_empty)
         {
-            if (mapping.contains(element.key()))
+            for (auto &element : row_parsed.items())
             {
-                string new_key = mapping.at(element.key());
-                new_el[new_key] = element.value();
+                if (element.value() != "")
+                {
+                    new_el[element.key()] = element.value();
+                }
             }
-            else
+        }
+        else
+        {
+            for (auto &element : row_parsed.items())
             {
-                new_el[element.key()] = element.value();
+                if (mapping.contains(element.key()))
+                {
+                    string new_key = mapping.at(element.key());
+                    new_el[new_key] = element.value();
+                }
+                else if (element.value() != "")
+                {
+                    new_el[element.key()] = element.value();
+                }
             }
         }
 

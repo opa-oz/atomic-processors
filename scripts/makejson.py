@@ -8,6 +8,9 @@ import sys
 records = int(sys.argv[1], 10)
 filename = sys.argv[2]
 with_holes = str(sys.argv[3]).lower() == 'true'
+seed = str(sys.argv[4])
+
+random.seed(seed if len(seed) > 1 else "random_seed")
 
 print("Making %d records" % records)
 print(f"Making holes: {with_holes}")
@@ -27,14 +30,14 @@ for i in range(0, records):
         if random.randint(0, 10) > 3:
             source.append(('name', random.choice(names)))
         if random.randint(0, 10) > 3:
-            source.append(('age', str(random.randint(10, 26))))
+            source.append(('age', random.randint(10, 26)))
         if random.randint(0, 10) > 3:
             source.append(('city', random.choice(cities)))
 
     else:
         source = [('id', i),
                   ('name', random.choice(names)),
-                  ('age', str(random.randint(10, 26))),
+                  ('age', random.randint(10, 26)),
                   ('city', random.choice(cities))]
 
     result.append(dict(source))

@@ -8,6 +8,9 @@ import sys
 records = int(sys.argv[1], 10)
 filename = sys.argv[2]
 with_holes = str(sys.argv[3]).lower() == 'true'
+seed = str(sys.argv[4])
+
+random.seed(seed if len(seed) > 1 else "random_seed")
 
 print("Making %d records" % records)
 print(f"Making holes: {with_holes}")
