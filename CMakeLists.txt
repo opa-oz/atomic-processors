@@ -2,22 +2,11 @@ cmake_minimum_required(VERSION 3.19)
 project(atomic_processors)
 
 set(CMAKE_CXX_STANDARD 14)
+# set(CMAKE_TOOLCHAIN_FILE "/Users/opa_oz/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
-include(FetchContent)
-
-FetchContent_Declare(json
-        GIT_REPOSITORY https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
-        GIT_TAG v3.7.3)
-
-FetchContent_GetProperties(json)
-if(NOT json_POPULATED)
-    FetchContent_Populate(json)
-    add_subdirectory(${json_SOURCE_DIR} ${json_BINARY_DIR} EXCLUDE_FROM_ALL)
-endif()
-
-add_subdirectory(include/CLI11)
+find_package(CLI11 CONFIG REQUIRED)
 
 add_executable(atomic_processors
         src/main.cpp)
 
-target_link_libraries(atomic_processors PRIVATE nlohmann_json::nlohmann_json CLI11::CLI11)
+target_link_libraries(atomic_processors PRIVATE CLI11::CLI11)
