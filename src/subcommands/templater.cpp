@@ -6,6 +6,7 @@
 #include <nlohmann/json.hpp>
 
 #include "../utils/string.cpp"
+#include "../utils/read.cpp"
 
 using namespace std;
 using json = nlohmann::json;
@@ -44,17 +45,6 @@ namespace Templater
         }
     }
 
-    string read_json_file(string &path)
-    {
-        ifstream input(path);
-        stringstream buffer;
-        buffer << input.rdbuf();
-
-        string result = buffer.str();
-
-        return result;
-    }
-
     void init(CLI::App &app)
     {
         auto templater = app.add_subcommand("templater", "Replace variables in text using JSON obj");
@@ -72,6 +62,6 @@ namespace Templater
         templater_files->add_option("--output1", _output_path, "Output file")->required();
 
         templater_files->callback([&]()
-                                  { process(_input_path, read_json_file(_variables_file), _output_path); });
+                                  { process(_input_path, Utils::file2string(_variables_file), _output_path); });
     };
 }
