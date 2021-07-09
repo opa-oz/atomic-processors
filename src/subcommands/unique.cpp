@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <unordered_set>
+#include <map>
 
 #include "CLI/App.hpp"
 #include "nlohmann/json.hpp"
@@ -90,7 +91,34 @@ namespace Unique
       }
 
       Utils::Write::json2file(output_path, output);
+      return;
     }
+
+    if (datatype == Datatype::Complex && keys.size() == 0)
+    {
+      throw runtime_error("Keys are required when datatype=Complex");
+    }
+
+    std::unordered_set<size_t> hashes = {};
+    json output = json::array();
+
+    for (json::iterator it = input.begin(); it != input.end(); ++it)
+    {
+      auto value = it.value();
+      if (value.is_array())
+      {
+        throw runtime_error("Expected array of OBJECTS");
+      }
+
+      const size_t h = Utils::JSON::get_hash_by_keys(value, keys);
+      if (hashes.find(h) == hashes.end())
+      {
+        hashes.insert(h);
+        output.push_back(value);
+      }
+    }
+
+    Utils::Write::json2file(output_path, output);
   }
 
   void init(CLI::App &app)
