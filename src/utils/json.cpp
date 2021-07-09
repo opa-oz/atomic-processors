@@ -7,7 +7,6 @@ using json = nlohmann::json;
 
 namespace Utils
 {
-
     namespace JSON
     {
         size_t null_hash = std::hash<std::string>{}("_opa_oz_null");

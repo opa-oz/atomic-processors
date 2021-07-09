@@ -129,6 +129,6 @@ namespace CSV2JSON
         csv2json_f->add_option("--param3", _quotechar, "Quoting char. Default '\"'");
 
         csv2json_f->callback([&]()
-                             { CSV2JSON::process(_input_path, Utils::file2string(_title_mapping_path), _delimiter, _quotechar, _output_path); });
+                             { CSV2JSON::process(_input_path, Utils::Read::file2string(_title_mapping_path), _delimiter, _quotechar, _output_path); });
     }
 }

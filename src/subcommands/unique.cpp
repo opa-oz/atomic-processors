@@ -46,14 +46,14 @@ namespace Unique
 
         if (_keys.length() > 0)
         {
-            keys = Utils::split(_keys);
+            keys = Utils::String::split(_keys);
         }
 
         using CLI::enums::operator<<;
         cout << "Processing params: " << endl;
         cout << "- filetype=" << filetype << endl;
         cout << "- datatype=" << datatype << endl;
-        cout << "- keys=" << Utils::join(keys, ", ") << endl;
+        cout << "- keys=" << Utils::String::join(keys, ", ") << endl;
 
         if (filetype != Filetype::JSON)
         {
@@ -61,7 +61,7 @@ namespace Unique
         }
 
         cout << "Lets parse input file" << endl;
-        auto input = Utils::file2json(input_path);
+        auto input = Utils::Read::file2json(input_path);
 
         if (!input.is_array())
         {
@@ -89,7 +89,7 @@ namespace Unique
                 }
             }
 
-            Utils::json2file(output_path, output);
+            Utils::Write::json2file(output_path, output);
         }
     }
 

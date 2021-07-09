@@ -9,17 +9,20 @@ using namespace std;
 
 namespace Utils
 {
-    void json2file(const string &filename, const nlohmann::json &obj)
+    namespace Write
     {
-        if (filename.length() < 1)
+        void json2file(const string &filename, const nlohmann::json &obj)
         {
-            throw runtime_error("There is no output file");
+            if (filename.length() < 1)
+            {
+                throw runtime_error("There is no output file");
+            }
+
+            ofstream output;
+            output.open(filename);
+
+            output << obj.dump();
+            output.close();
         }
-
-        ofstream output;
-        output.open(filename);
-
-        output << obj.dump();
-        output.close();
     }
 }

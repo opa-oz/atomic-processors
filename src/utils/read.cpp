@@ -9,19 +9,22 @@ using namespace std;
 
 namespace Utils
 {
-    std::string file2string(const string &filename)
+    namespace Read
     {
-        ifstream input(filename);
-        stringstream buffer;
-        buffer << input.rdbuf();
+        std::string file2string(const string &filename)
+        {
+            ifstream input(filename);
+            stringstream buffer;
+            buffer << input.rdbuf();
 
-        string result = buffer.str();
+            string result = buffer.str();
 
-        return result;
-    }
+            return result;
+        }
 
-    nlohmann::json file2json(const string &filename)
-    {
-        return nlohmann::json::parse(Utils::file2string(filename));
+        nlohmann::json file2json(const string &filename)
+        {
+            return nlohmann::json::parse(Utils::Read::file2string(filename));
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace Templater
                 for (auto &element : json_input.items())
                 {
                     string key = "${" + element.key() + "}";
-                    Utils::replace_all(line, key, element.value());
+                    Utils::String::replace_all(line, key, element.value());
                 }
                 output << line << endl;
             }
@@ -62,6 +62,6 @@ namespace Templater
         templater_files->add_option("--output1", _output_path, "Output file")->required();
 
         templater_files->callback([&]()
-                                  { process(_input_path, Utils::file2string(_variables_file), _output_path); });
+                                  { process(_input_path, Utils::Read::file2string(_variables_file), _output_path); });
     };
 }

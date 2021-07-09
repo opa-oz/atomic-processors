@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
-project(atomic_processors)
 
 set(CMAKE_CXX_STANDARD 14)
 # set(CMAKE_TOOLCHAIN_FILE "/Users/opa_oz/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+project(atomic_processors)
 
 find_package(CLI11 CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
