@@ -23,9 +23,7 @@ cities = ['Delhi', 'Kolkata', 'Chennai', 'Mumbai']
 
 writer.writerow(dict(zip(fieldnames, fieldnames)))
 for i in range(0, records):
-    source = [
-
-    ]
+    source = []
 
     if with_holes:
         if random.randint(0, 10) > 3:
