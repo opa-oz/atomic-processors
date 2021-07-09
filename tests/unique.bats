@@ -27,3 +27,9 @@ setup() {
   assert_success
   assert_output "${test}"
 }
+
+function teardown() {
+  rm "${input_json_flat}"
+  rm "${test_json_flat}"
+  rm "${output_json_flat}"
+}

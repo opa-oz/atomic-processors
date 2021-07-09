@@ -59,3 +59,15 @@ This is my phone number 1234
 This is non existing variablee \${i_am_error}
 EOF
 }
+
+function teardown() {
+    rm "${input_file}"
+    rm "${output_file}"
+
+    rm "${input_file_multiline}"
+    rm "${output_file_multiline}"
+
+    rm "${input_file_f}"
+    rm "${output_file_f}"
+    rm "${json_file_f}"
+}

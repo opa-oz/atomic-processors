@@ -12,15 +12,15 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    CLI::App app{"Universal package for processing"};
-    app.allow_extras(true);
-    app.require_subcommand(1);
+  CLI::App app{"Universal package for processing"};
+  app.allow_extras(true);
+  app.require_subcommand(1);
 
-    Templater::init(app);
-    CSV2JSON::init(app);
-    Unique::init(app);
+  Templater::init(app);
+  CSV2JSON::init(app);
+  Unique::init(app);
 
-    CLI11_PARSE(app, argc, argv);
+  CLI11_PARSE(app, argc, argv);
 
-    return 0;
+  return 0;
 }

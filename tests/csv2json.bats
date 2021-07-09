@@ -82,3 +82,20 @@ setup() {
     assert_success
     assert_output "${test}"
 }
+
+function teardown() {
+    rm "${input_file}"
+    rm "${output_file}"
+
+    rm "${input_file_custom_divider}"
+    rm "${output_file_custom_divider}"
+
+    rm "${input_file_mapper}"
+    rm "${output_file_mapper}"
+
+    rm "${input_file_random}"
+    rm "${output_file_random}"
+    rm "${test_file_random}"
+
+    rm "${header_mapping_file}"
+}
