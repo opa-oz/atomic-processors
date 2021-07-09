@@ -6,6 +6,7 @@
 
 #include "subcommands/templater.cpp"
 #include "subcommands/csv2json.cpp"
+#include "subcommands/unique.cpp"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ int main(int argc, char **argv)
 
     Templater::init(app);
     CSV2JSON::init(app);
+    Unique::init(app);
 
     CLI11_PARSE(app, argc, argv);
 
