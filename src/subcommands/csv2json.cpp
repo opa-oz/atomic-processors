@@ -8,21 +8,14 @@
 
 #include "../utils/read.cpp"
 
+#include "csv2json.h"
+
 using namespace std;
 using namespace csv;
 using json = nlohmann::json;
 
 namespace CSV2JSON
 {
-  string _input_path;
-  string _output_path;
-
-  string _title_mapping_json("{}");
-  string _title_mapping_path;
-
-  string _quotechar(1, '"');
-  string _delimiter(";");
-
   void write_row(ofstream &output, const CSVRow &row, const bool &is_mapping_empty, json &mapping)
   {
     json new_el = json({});

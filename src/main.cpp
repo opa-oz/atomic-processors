@@ -4,8 +4,9 @@
 #include "CLI/Formatter.hpp"
 #include "CLI/Config.hpp"
 
-#include "subcommands/templater.cpp"
 #include "subcommands/csv2json.cpp"
+
+#include "subcommands/templater.cpp"
 #include "subcommands/unique.cpp"
 
 using namespace std;
