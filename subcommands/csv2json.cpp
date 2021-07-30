@@ -12,7 +12,7 @@ namespace AtomicProcessors::CSV2JSON {
 
         if (is_mapping_empty) {
             for (auto &element : row_parsed.items()) {
-                if (!element.value().empty()) {
+                if (!element.value().empty() && element.value() != "") { // important to check like that
                     new_el[element.key()] = element.value();
                 }
             }

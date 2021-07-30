@@ -3,7 +3,7 @@
 load 'test_helper/bats-support/load'
 load 'test_helper/bats-assert/load'
 
-prefix="./tests/runtime/templater"
+prefix="./__tests__/runtime/templater"
 input_file="${prefix}_input.txt"
 output_file="${prefix}_output.txt"
 
@@ -21,7 +21,7 @@ json_file_f="${prefix}_json_f.json"
 @test "Run templater" {
     echo "My string for \${word} templating" > "${input_file}"
 
-    run ./build/atomic_processors templater --input1 "${input_file}" --output1 "${output_file}" --param1 "${json}"
+    run ./AtomicProcessors templater --input1 "${input_file}" --output1 "${output_file}" --param1 "${json}"
 
     run cat ${output_file}
     assert_success
@@ -35,7 +35,7 @@ json_file_f="${prefix}_json_f.json"
     echo "This is my phone number \${phone}" >> "${input_file_multiline}"
     echo "This is non existing variablee \${i_am_error}" >> "${input_file_multiline}"
 
-    run ./build/atomic_processors templater --input1 "${input_file_multiline}" --output1 "${output_file_multiline}" --param1 "${json_multiline}"
+    run ./AtomicProcessors templater --input1 "${input_file_multiline}" --output1 "${output_file_multiline}" --param1 "${json_multiline}"
 
     run cat ${output_file_multiline}
     assert_success
@@ -55,7 +55,7 @@ EOF
 
     echo "${json_multiline}" > "${json_file_f}"
 
-    run ./build/atomic_processors templater_f --input1 "${input_file_f}" --output1 "${output_file_f}" --input2 "${json_file_f}"
+    run ./AtomicProcessors templater_f --input1 "${input_file_f}" --output1 "${output_file_f}" --input2 "${json_file_f}"
     run cat ${output_file_f}
     assert_success
     assert_output - <<EOF

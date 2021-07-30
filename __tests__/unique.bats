@@ -3,7 +3,7 @@
 load 'test_helper/bats-support/load'
 load 'test_helper/bats-assert/load'
 
-prefix="./tests/runtime/unique"
+prefix="./__tests__/runtime/unique"
 
 input_json_flat="${prefix}_input_flat.json"
 test_json_flat="${prefix}_text_flat.json"
@@ -24,12 +24,12 @@ output_json_objects="${prefix}_output_objects.json"
 seed="unique"
 
 @test "Run unique with mixed flat json" {
-  ./scripts/makeflatjson.py 1000 "${input_json_flat}" mixed "${seed}"
+  ./__scripts__/makeflatjson.py 1000 "${input_json_flat}" mixed "${seed}"
   cp "${input_json_flat}" "${test_json_flat}"
-  ./scripts/uniquejson.py "${test_json_flat}" array key
-  ./scripts/unspacejson.py "${test_json_flat}"
+  ./__scripts__/uniquejson.py "${test_json_flat}" array key
+  ./__scripts__/unspacejson.py "${test_json_flat}"
 
-  run ./build/atomic_processors unique --input1="${input_json_flat}" --output1="${output_json_flat}" --param1=json --param2=simple
+  run ./AtomicProcessors unique --input1="${input_json_flat}" --output1="${output_json_flat}" --param1=json --param2=simple
 
   test="$(cat ${test_json_flat})"
   run cat ${output_json_flat}
@@ -40,12 +40,12 @@ seed="unique"
 }
 
 @test "Run unique with string flat json" {
-  ./scripts/makeflatjson.py 1000 "${input_json_flat_string}" string "${seed}"
+  ./__scripts__/makeflatjson.py 1000 "${input_json_flat_string}" string "${seed}"
   cp "${input_json_flat_string}" "${test_json_flat_string}"
-  ./scripts/uniquejson.py "${test_json_flat_string}" array key
-  ./scripts/unspacejson.py "${test_json_flat_string}"
+  ./__scripts__/uniquejson.py "${test_json_flat_string}" array key
+  ./__scripts__/unspacejson.py "${test_json_flat_string}"
 
-  run ./build/atomic_processors unique --input1="${input_json_flat_string}" --output1="${output_json_flat_string}" --param1=json --param2=simple
+  run ./AtomicProcessors unique --input1="${input_json_flat_string}" --output1="${output_json_flat_string}" --param1=json --param2=simple
 
   test="$(cat ${test_json_flat_string})"
   run cat ${output_json_flat_string}
@@ -56,12 +56,12 @@ seed="unique"
 }
 
 @test "Run unique with int flat json" {
-  ./scripts/makeflatjson.py 1000 "${input_json_flat_int}" int "${seed}"
+  ./__scripts__/makeflatjson.py 1000 "${input_json_flat_int}" int "${seed}"
   cp "${input_json_flat_int}" "${test_json_flat_int}"
-  ./scripts/uniquejson.py "${test_json_flat_int}" array key
-  ./scripts/unspacejson.py "${test_json_flat_int}"
+  ./__scripts__/uniquejson.py "${test_json_flat_int}" array key
+  ./__scripts__/unspacejson.py "${test_json_flat_int}"
 
-  run ./build/atomic_processors unique --input1="${input_json_flat_int}" --output1="${output_json_flat_int}" --param1=json --param2=simple
+  run ./AtomicProcessors unique --input1="${input_json_flat_int}" --output1="${output_json_flat_int}" --param1=json --param2=simple
 
   test="$(cat ${test_json_flat_int})"
   run cat ${output_json_flat_int}
@@ -74,13 +74,13 @@ seed="unique"
 @test "Run unique with mixed objects json" {
   keys="age,id,city,name"
 
-  ./scripts/makejson.py 250 "${input_json_objects}" true "${seed}"
+  ./__scripts__/makejson.py 250 "${input_json_objects}" true "${seed}"
   cp "${input_json_objects}" "${test_json_objects}"
-  ./scripts/uniquejson.py "${test_json_objects}" objects "${keys}"
-  ./scripts/sortjson.py "${test_json_objects}"
-  ./scripts/unspacejson.py "${test_json_objects}"
+  ./__scripts__/uniquejson.py "${test_json_objects}" objects "${keys}"
+  ./__scripts__/sortjson.py "${test_json_objects}"
+  ./__scripts__/unspacejson.py "${test_json_objects}"
 
-  run ./build/atomic_processors unique --input1="${input_json_objects}" --output1="${output_json_objects}" --param1=json --param2=complex --param3="${keys}"
+  run ./AtomicProcessors unique --input1="${input_json_objects}" --output1="${output_json_objects}" --param1=json --param2=complex --param3="${keys}"
 
   test="$(cat ${test_json_objects})"
   run cat ${output_json_objects}
