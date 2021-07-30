@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="AtomicProcessors"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\_deps\;CMake Files\_deps\json-src\;CMake Files\utils\;CMake Files\subcommands\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AtomicProcessors">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/AtomicProcessors" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 AtomicProcessors"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AtomicProcessors/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/AtomicProcessors" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 AtomicProcessors/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsString">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsString.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsString"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsString/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsString.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsString/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsJSON">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsJSON.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsJSON"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsJSON/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsJSON.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsJSON/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsVector">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsVector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsVector"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsVector/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsVector.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsVector/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsWrite">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsWrite.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsWrite"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsWrite/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsWrite.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsWrite/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsRead">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsRead.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsRead"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UtilsRead/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/utils/libUtilsRead.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/utils"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 UtilsRead/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/utils/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unique">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libUnique.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 Unique"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unique/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libUnique.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 Unique/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CSV2JSON">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libCSV2JSON.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 CSV2JSON"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CSV2JSON/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libCSV2JSON.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 CSV2JSON/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Templater">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libTemplater.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 Templater"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Templater/fast">
+				<Option output="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/libTemplater.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/opa_oz/CLionProjects/atomic_processors/subcommands"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/incl"/>
+					<Add directory="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 Templater/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/opa_oz/CLionProjects/atomic_processors/subcommands/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/main.cpp">
+			<Option target="AtomicProcessors"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/csv2json.cpp">
+			<Option target="CSV2JSON"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/csv2json.h">
+			<Option target="CSV2JSON"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/templater.cpp">
+			<Option target="Templater"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/templater.h">
+			<Option target="Templater"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/unique.cpp">
+			<Option target="Unique"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/unique.h">
+			<Option target="Unique"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/json.cpp">
+			<Option target="UtilsJSON"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/json.h">
+			<Option target="UtilsJSON"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/read.cpp">
+			<Option target="UtilsRead"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/read.h">
+			<Option target="UtilsRead"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/string.cpp">
+			<Option target="UtilsString"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/string.h">
+			<Option target="UtilsString"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/vector.cpp">
+			<Option target="UtilsVector"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/vector.h">
+			<Option target="UtilsVector"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/write.cpp">
+			<Option target="UtilsWrite"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/write.h">
+			<Option target="UtilsWrite"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/config.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/_deps/json-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\_deps\json-src\"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/utils/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\utils\"/>
+		</Unit>
+		<Unit filename="/Users/opa_oz/CLionProjects/atomic_processors/subcommands/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\subcommands\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
