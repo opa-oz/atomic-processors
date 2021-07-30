@@ -1,14 +1,34 @@
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.18.4)
+project(AtomicProcessors VERSION 1.0)
 
-set(CMAKE_CXX_STANDARD 14)
-# set(CMAKE_TOOLCHAIN_FILE "/Users/opa_oz/vcpkg/scripts/buildsystems/vcpkg.cmake")
+include(FetchContent)
 
-project(atomic_processors)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-find_package(CLI11 CONFIG REQUIRED)
-find_package(nlohmann_json CONFIG REQUIRED)
+configure_file(config.h.in config.h)
 
-add_executable(atomic_processors
-        src/main.cpp)
+FetchContent_Declare(json
+        GIT_REPOSITORY https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent
+        GIT_TAG v3.7.3)
 
-target_link_libraries(atomic_processors PRIVATE CLI11::CLI11 nlohmann_json nlohmann_json::nlohmann_json)
+FetchContent_GetProperties(json)
+if (NOT json_POPULATED)
+    FetchContent_Populate(json)
+    add_subdirectory(${json_SOURCE_DIR} ${json_BINARY_DIR} EXCLUDE_FROM_ALL)
+endif ()
+
+include_directories("${PROJECT_SOURCE_DIR}/incl/")
+
+add_subdirectory(utils)
+add_subdirectory(subcommands)
+
+add_executable(AtomicProcessors main.cpp)
+target_link_libraries(AtomicProcessors
+        PRIVATE nlohmann_json::nlohmann_json
+        PUBLIC UtilsString UtilsRead UtilsVector UtilsJSON UtilsWrite
+        Templater CSV2JSON Unique)
+
+target_include_directories(AtomicProcessors PUBLIC
+        "${PROJECT_BINARY_DIR}")

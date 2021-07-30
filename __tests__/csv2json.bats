@@ -3,7 +3,7 @@
 load 'test_helper/bats-support/load'
 load 'test_helper/bats-assert/load'
 
-prefix="./tests/runtime/csv2json"
+prefix="./__tests__/runtime/csv2json"
 input_file="${prefix}_input.csv"
 output_file="${prefix}_output.json"
 
@@ -30,7 +30,7 @@ setup() {
 }
 
 @test "Run csv2json" {
-    run ./build/atomic_processors csv2json --input1 "${input_file}" --output1 "${output_file}" --param1 "{}" --param2 "," --param3 "\""
+    run ./AtomicProcessors csv2json --input1 "${input_file}" --output1 "${output_file}" --param1 "{}" --param2 "," --param3 "\""
 
     run cat ${output_file}
     assert_success
@@ -42,7 +42,7 @@ setup() {
 @test "Run csv2json with custom divider" {
     cat "${input_file}" | awk '{gsub(/,/,";")}1' > "${input_file_custom_divider}"
 
-    run ./build/atomic_processors csv2json --input1 "${input_file_custom_divider}" --output1 "${output_file_custom_divider}" --param1 "{}" --param2 ";" --param3 "\""
+    run ./AtomicProcessors csv2json --input1 "${input_file_custom_divider}" --output1 "${output_file_custom_divider}" --param1 "{}" --param2 ";" --param3 "\""
 
     run cat ${output_file_custom_divider}
     assert_success
@@ -54,7 +54,7 @@ setup() {
 @test "Run csv2json with custom mapper" {
     cp "${input_file}" "${input_file_mapper}"
 
-    run ./build/atomic_processors csv2json --input1 "${input_file_mapper}" --output1 "${output_file_mapper}" --param1 "${header_mapping}" --param2 "," --param3 "\""
+    run ./AtomicProcessors csv2json --input1 "${input_file_mapper}" --output1 "${output_file_mapper}" --param1 "${header_mapping}" --param2 "," --param3 "\""
 
 
     run cat ${output_file_mapper}
@@ -68,7 +68,7 @@ setup() {
     cp "${input_file}" "${input_file_mapper}"
     echo "${header_mapping}" > "${header_mapping_file}"
 
-    run ./build/atomic_processors csv2json_f --input1 "${input_file_mapper}" --output1 "${output_file_mapper}" --input2 "${header_mapping_file}" --param2 "," --param3 "\""
+    run ./AtomicProcessors csv2json_f --input1 "${input_file_mapper}" --output1 "${output_file_mapper}" --input2 "${header_mapping_file}" --param2 "," --param3 "\""
 
     run cat ${output_file_mapper}
     assert_success
@@ -78,13 +78,13 @@ setup() {
 }
 
 @test "Run csv2json on random data" {
-    ./scripts/makecsv.py 5 "${input_file_random}" true "${seed}"
-    ./scripts/makejson.py 5 "${test_file_random}" true "${seed}"
+    ./__scripts__/makecsv.py 5 "${input_file_random}" true "${seed}"
+    ./__scripts__/makejson.py 5 "${test_file_random}" true "${seed}"
 
-    run ./build/atomic_processors csv2json --input1 "${input_file_random}" --output1 "${output_file_random}" --param1 "{}" --param2 "," --param3 "\""
+    run ./AtomicProcessors csv2json --input1 "${input_file_random}" --output1 "${output_file_random}" --param1 "{}" --param2 "," --param3 "\""
 
-    ./scripts/sortjson.py "${test_file_random}"
-    ./scripts/unspacejson.py "${test_file_random}"
+    ./__scripts__/sortjson.py "${test_file_random}"
+    ./__scripts__/unspacejson.py "${test_file_random}"
 
     test="$(cat ${test_file_random})"
     run cat ${output_file_random}
