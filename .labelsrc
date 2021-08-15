@@ -1,0 +1,46 @@
+{
+  "owner": "opa-oz",
+  "repo": "atomic-processors",
+  "labels": [
+    {
+      "name": ":beetle: bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": ":office_worker: code owners",
+      "description": "Code owners updates",
+      "color": "5F37B6"
+    },
+    {
+      "name": ":books: docs",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": ":star: enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": ":gear: workflow",
+      "description": " Workflow files updates",
+      "color": "B3B160"
+    },
+    {
+      "name": ":bookmark_tabs: license",
+      "description": "License changes",
+      "color": "1E3C42"
+    },
+    {
+      "name": ":open_book: readme",
+      "description": "README file updates",
+      "color": "0052CC"
+    },
+    {
+      "name": ":see_no_evil: duplicate",
+      "color": "cfd3d7",
+      "description": "This issue or pull request already exists"
+    }
+  ]
+}
