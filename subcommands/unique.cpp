@@ -7,7 +7,6 @@
 #include "../utils/read.h"
 #include "../utils/write.h"
 #include "../utils/json.h"
-#include "../utils/vector.h"
 
 #include "unique.h"
 

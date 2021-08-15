@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iterator>
+#include <string>
 
 #include "vector.h"
 

@@ -6,6 +6,9 @@
 #include "subcommands/templater.h"
 #include "subcommands/csv2json.h"
 #include "subcommands/unique.h"
+#include "subcommands/pick.h"
+
+#include "projects/anime-alice/extract.h"
 
 using namespace std;
 using namespace AtomicProcessors;
@@ -23,6 +26,9 @@ int main(int argc, char **argv) {
     Templater::init(app);
     CSV2JSON::init(app);
     Unique::init(app);
+    Pick().init(app);
+
+    AnimeAlice::ExtractLogs().init(app);
 
     CLI11_PARSE(app, argc, argv);
 

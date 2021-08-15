@@ -12,4 +12,8 @@ namespace Utils::JSON {
     void hash_combine(size_t &seed, const size_t &val);
 
     size_t get_hash_by_keys(const json &value, const vector<string> &keys);
+
+    void copy(const json &value, json &target, const string &key);
+
+    void push_to(const json &value, json &target);
 }

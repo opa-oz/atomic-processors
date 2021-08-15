@@ -143,6 +143,19 @@ AtomicProcessors/fast:
 .PHONY : AtomicProcessors/fast
 
 #=============================================================================
+# Target rules for targets named FileType
+
+# Build rule for target.
+FileType: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FileType
+.PHONY : FileType
+
+# fast build rule for target.
+FileType/fast:
+	$(MAKE) $(MAKESILENT) -f utils/CMakeFiles/FileType.dir/build.make utils/CMakeFiles/FileType.dir/build
+.PHONY : FileType/fast
+
+#=============================================================================
 # Target rules for targets named UtilsString
 
 # Build rule for target.
@@ -208,6 +221,19 @@ UtilsRead/fast:
 .PHONY : UtilsRead/fast
 
 #=============================================================================
+# Target rules for targets named Pick
+
+# Build rule for target.
+Pick: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Pick
+.PHONY : Pick
+
+# fast build rule for target.
+Pick/fast:
+	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/Pick.dir/build.make subcommands/CMakeFiles/Pick.dir/build
+.PHONY : Pick/fast
+
+#=============================================================================
 # Target rules for targets named Unique
 
 # Build rule for target.
@@ -246,6 +272,19 @@ Templater/fast:
 	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/Templater.dir/build.make subcommands/CMakeFiles/Templater.dir/build
 .PHONY : Templater/fast
 
+#=============================================================================
+# Target rules for targets named ExtractLogs
+
+# Build rule for target.
+ExtractLogs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ExtractLogs
+.PHONY : ExtractLogs
+
+# fast build rule for target.
+ExtractLogs/fast:
+	$(MAKE) $(MAKESILENT) -f projects/anime-alice/CMakeFiles/ExtractLogs.dir/build.make projects/anime-alice/CMakeFiles/ExtractLogs.dir/build
+.PHONY : ExtractLogs/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -283,6 +322,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AtomicProcessors"
 	@echo "... CSV2JSON"
+	@echo "... ExtractLogs"
+	@echo "... FileType"
+	@echo "... Pick"
 	@echo "... Templater"
 	@echo "... Unique"
 	@echo "... UtilsJSON"
