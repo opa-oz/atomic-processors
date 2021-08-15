@@ -221,6 +221,32 @@ UtilsRead/fast:
 .PHONY : UtilsRead/fast
 
 #=============================================================================
+# Target rules for targets named Templater
+
+# Build rule for target.
+Templater: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Templater
+.PHONY : Templater
+
+# fast build rule for target.
+Templater/fast:
+	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/Templater.dir/build.make subcommands/CMakeFiles/Templater.dir/build
+.PHONY : Templater/fast
+
+#=============================================================================
+# Target rules for targets named TextCleanUp
+
+# Build rule for target.
+TextCleanUp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TextCleanUp
+.PHONY : TextCleanUp
+
+# fast build rule for target.
+TextCleanUp/fast:
+	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/TextCleanUp.dir/build.make subcommands/CMakeFiles/TextCleanUp.dir/build
+.PHONY : TextCleanUp/fast
+
+#=============================================================================
 # Target rules for targets named Pick
 
 # Build rule for target.
@@ -258,19 +284,6 @@ CSV2JSON: cmake_check_build_system
 CSV2JSON/fast:
 	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/CSV2JSON.dir/build.make subcommands/CMakeFiles/CSV2JSON.dir/build
 .PHONY : CSV2JSON/fast
-
-#=============================================================================
-# Target rules for targets named Templater
-
-# Build rule for target.
-Templater: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Templater
-.PHONY : Templater
-
-# fast build rule for target.
-Templater/fast:
-	$(MAKE) $(MAKESILENT) -f subcommands/CMakeFiles/Templater.dir/build.make subcommands/CMakeFiles/Templater.dir/build
-.PHONY : Templater/fast
 
 #=============================================================================
 # Target rules for targets named ExtractLogs
@@ -326,6 +339,7 @@ help:
 	@echo "... FileType"
 	@echo "... Pick"
 	@echo "... Templater"
+	@echo "... TextCleanUp"
 	@echo "... Unique"
 	@echo "... UtilsJSON"
 	@echo "... UtilsRead"

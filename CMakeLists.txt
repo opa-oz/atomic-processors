@@ -29,7 +29,7 @@ add_executable(AtomicProcessors main.cpp)
 target_link_libraries(AtomicProcessors
         PRIVATE nlohmann_json::nlohmann_json
         PUBLIC UtilsString UtilsRead UtilsVector UtilsJSON UtilsWrite
-        Templater CSV2JSON Unique Pick
+        Templater CSV2JSON Unique Pick TextCleanUp
         ExtractLogs)
 
 target_include_directories(AtomicProcessors PUBLIC

@@ -7,6 +7,7 @@
 #include "subcommands/csv2json.h"
 #include "subcommands/unique.h"
 #include "subcommands/pick.h"
+#include "subcommands/text_clean.h"
 
 #include "projects/anime-alice/extract.h"
 
@@ -27,6 +28,7 @@ int main(int argc, char **argv) {
     CSV2JSON::init(app);
     Unique::init(app);
     Pick().init(app);
+    TextCleanUp().init(app);
 
     AnimeAlice::ExtractLogs().init(app);
 
